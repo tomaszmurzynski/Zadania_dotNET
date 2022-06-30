@@ -11,6 +11,7 @@ namespace Zadania_dotNET
 {
     class Model
     {
+        public bool IsNewElement = false;
         public ObservableCollection<Film> ListaFilmow { get; set; } = new ObservableCollection<Film>(new Film[]{
             new Film(){Tytul="Czarny telefon",Rezyser="Scott Derrickson",Wydawca="USA",Nosnik="DVD",DataWydania=DateTime.Parse("24.06.2022")},
             new Film(){Tytul="Yang",Rezyser="Kogonada",Wydawca="USA",Nosnik="DVD",DataWydania=DateTime.Parse("1.07.2022")},
@@ -20,9 +21,9 @@ namespace Zadania_dotNET
 
         internal Film NowyElement()
         {
-            Film nowa = new Film();
-            ListaFilmow.Add(nowa);
-            return nowa;
+            Film nowy = new Film();
+            ListaFilmow.Add(nowy);
+            return nowy;
         }
     }
 }

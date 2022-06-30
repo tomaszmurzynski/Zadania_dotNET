@@ -42,7 +42,7 @@ namespace Zadania_dotNET
             /*Osoba nowa = model.NowaOsoba();
             new OknoSzczegółów(nowa).Show();*/
 
-            //new OknoSzczegółów(model.NowyElement()).Show();
+            new OknoSzczegółów(model.NowyElement()).Show();
         }
     }
 }
