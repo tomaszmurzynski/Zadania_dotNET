@@ -41,7 +41,7 @@
         </Button>
         <Button
             Grid.Column="1"
-            Grid.Row="1" Click="NowyElement"
+            Grid.Row="1" Click="NowyFilm"
             >
             Nowy
         </Button>

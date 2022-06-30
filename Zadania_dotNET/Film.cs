@@ -13,12 +13,16 @@ namespace Zadania_dotNET
         public event PropertyChangedEventHandler PropertyChanged;
         readonly static Dictionary<string, string[]> powiązaneWłaściwości = new Dictionary<string, string[]>()
         {
-            ["Imię"] = new string[] { "ImięNazwisko" },
-            ["Nazwisko"] = new string[] { "ImięNazwisko" },
+            ["Tytuł"] = new string[] { "TytulRezyser" },
+            ["Rezyser"] = new string[] { "TytulRezyser" },
+
+            ["Wydawca"] = new string[] { "Wydawca" },
+            ["Nosnik"] = new string[] { "Nośnik" },
+
             ["DataUrodzenia"] = new string[] { "Wiek" },
             ["DataŚmierci"] = new string[] { "Wiek" },
             ["Wiek"] = new string[] { "Szczegóły" },
-            ["ImięNazwisko"] = new string[] { "Szczegóły" },
+            ["TytulRezyser"] = new string[] { "Szczegóły" },
         };
         public void OnPropertyChanged(
             [CallerMemberName] string właściwość = null,
@@ -44,34 +48,55 @@ namespace Zadania_dotNET
 
         public uint ID { get; } = następneID++;
         string
-            imię,
-            nazwisko
+            tytul,
+            rezyser,
+            wydawca,
+            nosnik
             ;
         DateTime?
             dataUrodzenia,
             dataŚmierci
             ;
 
-        public string ImięNazwisko
+        public string TytulRezyser
         {
-            get { return $"{Imię} {Nazwisko}"; }
+            get { return $"{Tytul} {Rezyser}"; }
         }
 
-        public string Imię
+        public string Wydawca
         {
-            get => imię;
+            get => wydawca;
             set
             {
-                imię = value;
+                wydawca = value;
                 OnPropertyChanged();
             }
         }
-        public string Nazwisko
+
+        public string Nosnik
         {
-            get => nazwisko;
+            get => nosnik;
             set
             {
-                nazwisko = value;
+                nosnik = value;
+                OnPropertyChanged();
+            }
+        }
+        public string Tytul
+        {
+            get => tytul;
+            set
+            {
+                tytul = value;
+                OnPropertyChanged();
+            }
+        }
+        public string Rezyser
+        {
+            get => rezyser;
+            set
+            {
+                rezyser = value;
                 OnPropertyChanged();
             }
         }
@@ -111,7 +136,7 @@ namespace Zadania_dotNET
                 return (czas.Days / 365).ToString();
             }
         }
-        public string Szczegóły => $"{ImięNazwisko}, {Wiek} lat(a)";
+        public string Szczegóły => $"{TytulRezyser}, {Wiek} lat(a)";
 
         /*public override string ToString()
         {
