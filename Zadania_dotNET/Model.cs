@@ -11,23 +11,23 @@ namespace Zadania_dotNET
 {
     class Model
     {
-        public ObservableCollection<Osoba> ListaOsób { get; set; } = new ObservableCollection<Osoba>(new Osoba[]{
-            new Osoba(){
-                Imię="Marian",
-                Nazwisko="Sosnowski",
+        public ObservableCollection<Film> ListaFilmow { get; set; } = new ObservableCollection<Film>(new Film[]{
+            new Film(){
+                Tytul="Marian",
+                Rezyser="Sosnowski",
                 DataUrodzenia=DateTime.Parse("1.1.1900"),
                 DataŚmierci=DateTime.Parse("1.1.1950"),
             },
-            new Osoba(){Imię="Jan", Nazwisko="Sosnowski", DataUrodzenia=DateTime.Parse("1.1.1990")},
-            new Osoba(){Imię="Adam",Nazwisko="Dąbrowski", DataUrodzenia=DateTime.Parse("2.2.1995")},
-            new Osoba(){Imię="Anna",Nazwisko="Wiśniewska", DataUrodzenia=DateTime.Parse("3.3.2000")},
-            new Osoba(){Imię="Julia",Nazwisko="Jabłońska", DataUrodzenia=DateTime.Parse("4.4.2005")}
+            new Film(){Tytul="Jan", Rezyser="Sosnowski", DataUrodzenia=DateTime.Parse("1.1.1990")},
+            new Film(){Tytul="Adam",Rezyser="Dąbrowski", DataUrodzenia=DateTime.Parse("2.2.1995")},
+            new Film(){Tytul="Anna",Rezyser="Wiśniewska", DataUrodzenia=DateTime.Parse("3.3.2000")},
+            new Film(){Tytul="Julia",Rezyser="Jabłońska", DataUrodzenia=DateTime.Parse("4.4.2005")}
         });
 
-        internal Osoba NowaOsoba()
+        internal Film NowyFilm()
         {
-            Osoba nowa = new Osoba();
-            ListaOsób.Add(nowa);
+            Film nowa = new Film();
+            ListaFilmow.Add(nowa);
             return nowa;
         }
     }
