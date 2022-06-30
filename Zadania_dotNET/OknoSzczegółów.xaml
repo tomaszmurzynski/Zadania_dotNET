@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="OknoSzczegółów"
         Height="550"
-        Width="400"
+        Width="600"
         FontSize="24"
         >
     <Grid>
@@ -16,6 +16,8 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
@@ -46,28 +48,36 @@
             Grid.Row="2"
             Text="{Binding Rezyser}"
             />
-
         <Label
             Grid.Row="3"
-            >Data Urodzenia</Label>
-        <DatePicker
+            >Wydawca</Label>
+        <TextBox
             Grid.Column="1"
             Grid.Row="3"
-            SelectedDate="{Binding DataUrodzenia}"
+            Text="{Binding Wydawca}"
+            />
+        <Label
+            Grid.Row="4"
+            >Nośnik</Label>
+        <TextBox
+            Grid.Column="1"
+            Grid.Row="4"
+            Text="{Binding Nosnik}"
             />
 
         <Label
-            Grid.Row="4"
-            >Data Śmierci</Label>
+            Grid.Row="5"
+            >Data wydania</Label>
         <DatePicker
             Grid.Column="1"
-            Grid.Row="4"
-            SelectedDate="{Binding DataŚmierci}"
+            Grid.Row="5"
+            SelectedDate="{Binding DataWydania}"
             />
 
+        
         <Button
             Grid.Column="1"
-            Grid.Row="5" 
+            Grid.Row="6" 
             Click="OK"
             >
             OK

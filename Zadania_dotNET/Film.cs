@@ -20,9 +20,6 @@ namespace Zadania_dotNET
             ["Nosnik"] = new string[] { "Nośnik" },
 
             ["DataWydania"] = new string[] { "Wydanie" },
-           // ["DataŚmierci"] = new string[] { "Wiek" },
-          //["Wiek"] = new string[] { "Szczegóły" },
-          //  ["TytulRezyser"] = new string[] { "Szczegóły" },
         };
         public void OnPropertyChanged(
             [CallerMemberName] string właściwość = null,
@@ -60,7 +57,7 @@ namespace Zadania_dotNET
 
         public string TytulRezyser
         {
-            get { return $"{Tytul} {Rezyser}"; }
+            get { return $"{Tytul} , {Rezyser}"; }
         }
 
         public string Wydawca
@@ -136,7 +133,7 @@ namespace Zadania_dotNET
                 return (czas.Days / 365).ToString();
             }
         }
-        public string Szczegóły => $"{TytulRezyser}, {Wydanie} lat(a)";
+        public string Szczegóły => $"{TytulRezyser}";
 
        public override string ToString()
         {
