@@ -38,7 +38,7 @@ namespace Zadania_dotNET
             /*Osoba nowa = model.NowaOsoba();
             new OknoSzczegółów(nowa).Show();*/
 
-            new OknoSzczegółów(model.NowyFilm()).Show();
+            new OknoSzczegółów(model.NowyElement()).Show();
         }
     }
 }

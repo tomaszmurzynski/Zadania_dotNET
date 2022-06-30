@@ -22,7 +22,7 @@ namespace Zadania_dotNET
             //new Film(){Tytul="Julia",Rezyser="Jabłońska", DataUrodzenia=DateTime.Parse("4.4.2005")}
         });
 
-        internal Film NowyFilm()
+        internal Film NowyElement()
         {
             Film nowa = new Film();
             ListaFilmow.Add(nowa);
