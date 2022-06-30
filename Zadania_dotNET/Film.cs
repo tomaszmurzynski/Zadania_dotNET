@@ -51,8 +51,7 @@ namespace Zadania_dotNET
             nosnik
             ;
         DateTime?
-            dataWydania,
-            dataŚmierci
+            dataWydania
             ;
 
         public string TytulRezyser
@@ -107,32 +106,8 @@ namespace Zadania_dotNET
                 OnPropertyChanged();
             }
         }
-       /* public DateTime? DataŚmierci
-        {
-            get => dataŚmierci;
-            set
-            {
-                dataŚmierci = value;
-                OnPropertyChanged();
-            }
-        }  */
-        public string Wydanie
-        {
-            get
-            {
-                if (dataWydania == null)
-                    return "BD";
-
-                DateTime? koniec;
-                if (dataŚmierci == null)
-                    koniec = DateTime.Now;
-                else
-                    koniec = dataŚmierci;
-
-                TimeSpan czas = (TimeSpan)(koniec - dataWydania);
-                return (czas.Days / 365).ToString();
-            }
-        }
+      
+      
         public string Szczegóły => $"{TytulRezyser}";
 
        public override string ToString()

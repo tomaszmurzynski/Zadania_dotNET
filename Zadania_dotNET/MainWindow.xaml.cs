@@ -35,10 +35,14 @@ namespace Zadania_dotNET
 
         private void NowyElement(object sender, RoutedEventArgs e)
         {
+            Film nowy = model.NowyElement();
+            new OknoSzczegółów(nowy).Show();
+
+
             /*Osoba nowa = model.NowaOsoba();
             new OknoSzczegółów(nowa).Show();*/
 
-            new OknoSzczegółów(model.NowyElement()).Show();
+            //new OknoSzczegółów(model.NowyElement()).Show();
         }
     }
 }
