@@ -12,14 +12,10 @@ namespace Zadania_dotNET
     class Model
     {
         public ObservableCollection<Film> ListaFilmow { get; set; } = new ObservableCollection<Film>(new Film[]{
-            new Film(){Tytul="Marian",Rezyser="A. Sosnowski",Wydawca="Wydawca1",Nosnik="DVD",DataWydania=DateTime.Parse("1.1.1900")},
-            new Film(){Tytul="Marian",Rezyser="A. Sosnowski",Wydawca="Wydawca1",Nosnik="DVD",DataWydania=DateTime.Parse("1.1.1900")},
-            new Film(){Tytul="Marian",Rezyser="A. Sosnowski",Wydawca="Wydawca1",Nosnik="DVD",DataWydania=DateTime.Parse("1.1.1900")},
-            new Film(){Tytul="Marian",Rezyser="A. Sosnowski",Wydawca="Wydawca1",Nosnik="DVD",DataWydania=DateTime.Parse("1.1.1900")}
-            //new Film(){Tytul="Jan", Rezyser="Sosnowski", DataUrodzenia=DateTime.Parse("1.1.1990")},
-            //new Film(){Tytul="Adam",Rezyser="Dąbrowski", DataUrodzenia=DateTime.Parse("2.2.1995")},
-            //new Film(){Tytul="Anna",Rezyser="Wiśniewska", DataUrodzenia=DateTime.Parse("3.3.2000")},
-            //new Film(){Tytul="Julia",Rezyser="Jabłońska", DataUrodzenia=DateTime.Parse("4.4.2005")}
+            new Film(){Tytul="Czarny telefon",Rezyser="Scott Derrickson",Wydawca="USA",Nosnik="DVD",DataWydania=DateTime.Parse("24.06.2022")},
+            new Film(){Tytul="Yang",Rezyser="Kogonada",Wydawca="USA",Nosnik="DVD",DataWydania=DateTime.Parse("1.07.2022")},
+            new Film(){Tytul="Hocus Pocus 2",Rezyser="Adam Shankman",Wydawca="USA",Nosnik="DVD",DataWydania=DateTime.Parse("15.09.2022")},
+            new Film(){Tytul="Rzut życia",Rezyser="Jeremiah Zagar",Wydawca="Wydawca1",Nosnik="DVD",DataWydania=DateTime.Parse("8.06.2022")}
         });
 
         internal Film NowyElement()
