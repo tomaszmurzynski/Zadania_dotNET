@@ -21,10 +21,10 @@
         </Grid.RowDefinitions>
 
         <ListBox
-            Name="ListaOsób"
+            Name="ListaFilmow"
             Grid.Row="0"
             Grid.ColumnSpan="2"
-            ItemsSource="{Binding ListaOsób}"
+            ItemsSource="{Binding ListaFilmow}"
             >
             <ListBox.ItemTemplate>
                 <DataTemplate>
@@ -41,7 +41,7 @@
         </Button>
         <Button
             Grid.Column="1"
-            Grid.Row="1" Click="NowyFilm"
+            Grid.Row="1" Click="NowyElement"
             >
             Nowy
         </Button>

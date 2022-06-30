@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
 namespace Zadania_dotNET
 {
     /// <summary>
@@ -19,9 +20,15 @@ namespace Zadania_dotNET
     /// </summary>
     public partial class OknoSzczegółów : Window
     {
-        public OknoSzczegółów()
+        public OknoSzczegółów(Film film)
         {
+            DataContext = film;
             InitializeComponent();
+        }
+
+        private void OK(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -19,10 +19,10 @@ namespace Zadania_dotNET
             ["Wydawca"] = new string[] { "Wydawca" },
             ["Nosnik"] = new string[] { "Nośnik" },
 
-            ["DataUrodzenia"] = new string[] { "Wiek" },
-            ["DataŚmierci"] = new string[] { "Wiek" },
-            ["Wiek"] = new string[] { "Szczegóły" },
-            ["TytulRezyser"] = new string[] { "Szczegóły" },
+            ["DataWydania"] = new string[] { "Wydanie" },
+           // ["DataŚmierci"] = new string[] { "Wiek" },
+          //["Wiek"] = new string[] { "Szczegóły" },
+          //  ["TytulRezyser"] = new string[] { "Szczegóły" },
         };
         public void OnPropertyChanged(
             [CallerMemberName] string właściwość = null,
@@ -54,7 +54,7 @@ namespace Zadania_dotNET
             nosnik
             ;
         DateTime?
-            dataUrodzenia,
+            dataWydania,
             dataŚmierci
             ;
 
@@ -101,12 +101,12 @@ namespace Zadania_dotNET
             }
         }
 
-        public DateTime? DataUrodzenia
+        public DateTime? DataWydania
         {
-            get => dataUrodzenia;
+            get => dataWydania;
             set
             {
-                dataUrodzenia = value;
+                dataWydania = value;
                 OnPropertyChanged();
             }
         }
@@ -119,11 +119,11 @@ namespace Zadania_dotNET
                 OnPropertyChanged();
             }
         }
-        public string Wiek
+        public string Wydanie
         {
             get
             {
-                if (dataUrodzenia == null)
+                if (dataWydania == null)
                     return "BD";
 
                 DateTime? koniec;
@@ -132,15 +132,15 @@ namespace Zadania_dotNET
                 else
                     koniec = dataŚmierci;
 
-                TimeSpan czas = (TimeSpan)(koniec - dataUrodzenia);
+                TimeSpan czas = (TimeSpan)(koniec - dataWydania);
                 return (czas.Days / 365).ToString();
             }
         }
-        public string Szczegóły => $"{TytulRezyser}, {Wiek} lat(a)";
+        public string Szczegóły => $"{TytulRezyser}, {Wydanie} lat(a)";
 
-        /*public override string ToString()
+       public override string ToString()
         {
-            return ImięNazwisko;
-        }*/
+            return TytulRezyser;
+        }
     }
 }
