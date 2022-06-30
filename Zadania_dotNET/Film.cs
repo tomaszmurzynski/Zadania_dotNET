@@ -110,7 +110,7 @@ namespace Zadania_dotNET
                 OnPropertyChanged();
             }
         }
-        public DateTime? DataŚmierci
+       /* public DateTime? DataŚmierci
         {
             get => dataŚmierci;
             set
@@ -118,7 +118,7 @@ namespace Zadania_dotNET
                 dataŚmierci = value;
                 OnPropertyChanged();
             }
-        }
+        }  */
         public string Wydanie
         {
             get

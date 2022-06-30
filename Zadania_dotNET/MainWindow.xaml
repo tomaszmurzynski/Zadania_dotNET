@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Nasze okno"
         Height="650"
-        Width="400"
+        Width="600"
         FontSize="24"
     >
     <Grid>
