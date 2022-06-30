@@ -33,7 +33,7 @@
 
         <Label
             Grid.Row="1"
-            >Tytul</Label>
+            >Tytuł</Label>
         <TextBox
             Grid.Column="1"
             Grid.Row="1"
@@ -42,7 +42,7 @@
 
         <Label
             Grid.Row="2"
-            >Rezyser</Label>
+            >Reżyser</Label>
         <TextBox
             Grid.Column="1"
             Grid.Row="2"
