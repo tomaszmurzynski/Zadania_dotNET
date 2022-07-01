@@ -60,6 +60,7 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
         <Button Grid.Column="0" Grid.Row="2" Style="{StaticResource SpecialButtonStyle}" Click="ShowElementList" Background="#FF5252EF">Elementy</Button>
@@ -67,6 +68,13 @@
         <Button Grid.Column="0" Grid.Row="1" Style="{StaticResource SpecialButtonStyle}" Click="ShowUnderCategoryList" Background="#FF5353E3">Podkatygorie</Button>
         <Button Grid.Column="0" Grid.Row="3" Style="{StaticResource SpecialButtonStyle}" Click="AddToCart" Background="#FF5353E3">Kup</Button>
         
+        <ListBox Name="Kategoria" Grid.RowSpan="4" Grid.Column="2" ItemsSource="{Binding ListaKategoria}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Szczegóły}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
         
 
 
