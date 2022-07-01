@@ -20,6 +20,7 @@ namespace Zadania_dotNET
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<Category> listCategory = new List<Category>();
         public MainWindow()
         {
             InitializeComponent();
