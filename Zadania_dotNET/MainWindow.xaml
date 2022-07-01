@@ -5,8 +5,70 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Zadania_dotNET"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="400">
+
+    <Window.Resources>
+        
+        <SolidColorBrush x:Key="MySolidColorDarkRed" Color="#900" />
+        <SolidColorBrush x:Key="MySolidColorPurple" Color="#99D" />
+        <SolidColorBrush x:Key="MySolidColorBlue" Color="#15D" />
+        <SolidColorBrush x:Key="MySolidColorGrey" Color="#DDF" />
+        <SolidColorBrush x:Key="MySolidColorWhiteGrey" Color="#EEE" />
+        <SolidColorBrush x:Key="MySolidColorBlack" Color="#000" />
+        <SolidColorBrush x:Key="MySolidColorWhite" Color="White" />
+        <SolidColorBrush x:Key="MySolidColorGreen" Color="Green" />
+        
+        
+        <Style TargetType="Button" 
+               BasedOn="{StaticResource {x:Type Button}}"
+               x:Key="SpecialButtonStyle">
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Background" Value="{StaticResource MySolidColorGrey}" />
+            <Setter Property="Foreground" Value="{StaticResource MySolidColorBlack}"/>
+            <Setter Property="Width" Value="130" />
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="{StaticResource MySolidColorPurple}" />
+                    <Setter Property="Foreground" Value="{StaticResource MySolidColorDarkRed}" />
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="{StaticResource MySolidColorWhite}"/>
+                    <Setter Property="Foreground" Value="{StaticResource MySolidColorGreen}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+
+
+    </Window.Resources>
+    
+    
+    
+    
+    
+    
     <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Button Grid.Column="0" Grid.Row="2" Style="{StaticResource SpecialButtonStyle}" Click="ShowElementList" Background="#FF5252EF">Elementy</Button>
+        <Button Grid.Column="0" Grid.Row="0" Style="{StaticResource SpecialButtonStyle}" Click="ShowCategoryList" Background="#FF5353E3">Kategoria</Button>
+        <Button Grid.Column="0" Grid.Row="1" Style="{StaticResource SpecialButtonStyle}" Click="ShowUnderCategoryList" Background="#FF5353E3">Podkatygorie</Button>
+        <Button Grid.Column="0" Grid.Row="3" Style="{StaticResource SpecialButtonStyle}" Click="AddToCart" Background="#FF5353E3">Kup</Button>
+        
+        
+
 
     </Grid>
 </Window>
