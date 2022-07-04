@@ -13,8 +13,28 @@ namespace Zadania_dotNET
         public int[] underCategory = new int[5];
         public Category()
         {
-            this.id = 0;
             this.name = "Nieznana Kategoria";
+            id++;
+        }
+
+        public Category(int id, string name)
+        {
+            this.id = id;
+            this.name = name;
+            id++;
+        }
+
+        public Category(string name_)
+        {
+            this.name = name_;
+            id++;
+        }
+
+        public Category(int id_, string name_, int[] underCetegory_)
+        {
+            this.id = id_;
+            this.name = name_;
+            this.underCategory = underCetegory_;
             id++;
         }
 
@@ -26,6 +46,14 @@ namespace Zadania_dotNET
         public string Name {
             get { return name; }
             set { name = value; }
+        }
+
+        public void ShowCategoryList()
+        {
+            foreach (var category in underCategory)
+            {
+ 
+            }
         }
     }
 }

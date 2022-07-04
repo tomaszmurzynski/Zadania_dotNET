@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,10 +21,28 @@ namespace Zadania_dotNET
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<Category> listCategory = new List<Category>();
+        ObservableCollection<Category> listCategory = new ObservableCollection<Category>();
         public MainWindow()
         {
             InitializeComponent();
+
+            DataContext = this.GetListCategories();
+        }
+
+        public ObservableCollection<Category> GetListCategories()
+        {
+            listCategory.Add(new Category() { Id = 1, Name = "Samochody" });
+            listCategory.Add(new Category() { Id = 2, Name = "Motocykle" });
+            listCategory.Add(new Category() { Id = 3, Name = "Nieruchomości" });
+
+            return listCategory;
+        }
+
+        private void ShowCategoryList(object sender, RoutedEventArgs e)
+        {
+            listCategory.Add(new Category());   
         }
     }
+
+
 }
