@@ -20,6 +20,7 @@ namespace Zadania_dotNET
     public partial class MainWindow : Window
     {
         Model model = new Model();
+       
         public MainWindow()
         {
             InitializeComponent();
@@ -35,14 +36,19 @@ namespace Zadania_dotNET
 
         private void NowyElement(object sender, RoutedEventArgs e)
         {
-            Film nowy = model.NowyElement();
-            new OknoSzczegółów(nowy).Show();
+           
+            new OknoSzczegółów(model.NowyElement()).Show();
 
 
             /*Osoba nowa = model.NowaOsoba();
             new OknoSzczegółów(nowa).Show();*/
 
-            new OknoSzczegółów(model.NowyElement()).Show();
+            
+        }
+        private void Ok(object sender, RoutedEventArgs e)
+        {
+            //new OknoSzczegółów(model.NowyElement()).Show();
+            model.ListaFilmow.Add(new Film((string)this.FindName("Tytul"), (string)this.FindName("Rezyser"), (string)this.FindName("Wydawca"), (string)this.FindName("Nosnik"), (DateTime)this.FindName("DataWydania")));
         }
     }
 }

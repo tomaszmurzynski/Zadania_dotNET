@@ -41,6 +41,20 @@ namespace Zadania_dotNET
                             );
         }
 
+        public Film(string tytul, string rezyser, string wydawca, string nosnik, DateTime? dataWydania)
+        {
+            
+            this.tytul = tytul;
+            this.rezyser = rezyser;
+            this.wydawca = wydawca;
+            this.nosnik = nosnik;
+            this.dataWydania = dataWydania;
+        }
+
+        public Film()
+        {
+        }
+
         public static uint następneID = 0;
 
         public uint ID { get; } = następneID++;
