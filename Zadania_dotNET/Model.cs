@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 
 namespace Zadania_dotNET
@@ -61,7 +57,7 @@ namespace Zadania_dotNET
             set
             {
                 liczbaA = value;
-                //PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Bufory"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Bufory"));
             }
         }
         public double LiczbaB
@@ -147,7 +143,11 @@ namespace Zadania_dotNET
             else if (BuforDziałania == "x²")
                 wynik = LiczbaA * LiczbaA;
             else if (BuforDziałania == "√")
+            {
+                buforIO = "";
                 wynik = Math.Sqrt(LiczbaA);
+            }
+
             else if (BuforDziałania == "1/x")
                 wynik = 1 / LiczbaA;
             else
@@ -174,6 +174,8 @@ namespace Zadania_dotNET
             if (buforIO == "0")
                 return;
             else if (
+                buforIO == ""
+                ||
                 buforIO == "0,"
                 ||
                 buforIO == "-0,"
