@@ -20,6 +20,7 @@ namespace Zadania_dotNET
     /// </summary>
     public partial class OknoSzczegółów : Window
     {
+        Model model = new Model();
         public OknoSzczegółów(Film film)
         {
             DataContext = film;
@@ -28,6 +29,10 @@ namespace Zadania_dotNET
 
         private void OK(object sender, RoutedEventArgs e)
         {
+            
+                //new OknoSzczegółów(model.NowyElement()).Show();
+                model.ListaFilmow.Add(new Film((string)this.FindName("Tytul"), (string)this.FindName("Rezyser"), (string)this.FindName("Wydawca"), (string)this.FindName("Nosnik"), (DateTime)this.FindName("DataWydania")));
+           
             this.Close();
         }
     }

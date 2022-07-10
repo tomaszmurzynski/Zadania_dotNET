@@ -45,10 +45,6 @@ namespace Zadania_dotNET
 
             
         }
-        private void Ok(object sender, RoutedEventArgs e)
-        {
-            //new OknoSzczegółów(model.NowyElement()).Show();
-            model.ListaFilmow.Add(new Film((string)this.FindName("Tytul"), (string)this.FindName("Rezyser"), (string)this.FindName("Wydawca"), (string)this.FindName("Nosnik"), (DateTime)this.FindName("DataWydania")));
-        }
+        
     }
 }

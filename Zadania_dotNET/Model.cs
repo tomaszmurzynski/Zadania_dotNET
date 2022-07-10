@@ -21,9 +21,13 @@ namespace Zadania_dotNET
 
         internal Film NowyElement()
         {
-            Film nowy = new Film();
-            ListaFilmow.Add(nowy);
-            return nowy;
+            if (!IsNewElement)
+            {
+                return new Film();
+            }
+            //Film nowy = new Film();
+            //ListaFilmow.Add(nowy);
+            return new Film();
         }
     }
 }
