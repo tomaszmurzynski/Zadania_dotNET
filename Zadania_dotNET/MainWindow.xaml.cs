@@ -16,13 +16,71 @@ using System.Windows.Shapes;
 namespace Zadania_dotNET
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Logika interakcji dla klasy MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        Model model = new Model();
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = model;
+        }
+
+        private void Cyfra(object sender, RoutedEventArgs e)
+        {
+            model.DopiszCyfrę(
+                (string)((Button)sender).Content
+                );
+        }
+
+        private void ZmianaZnaku(object sender, RoutedEventArgs e)
+        {
+            model.ZmieńZnak();
+        }
+
+        private void Przecinek(object sender, RoutedEventArgs e)
+        {
+            model.PostawPrzecinek();
+        }
+
+        private void Cofnij(object sender, RoutedEventArgs e)
+        {
+            model.Cofnij();
+        }
+
+        private void Resetuj(object sender, RoutedEventArgs e)
+        {
+            model.Resetuj();
+        }
+
+        private void Zeruj(object sender, RoutedEventArgs e)
+        {
+            model.Zeruj();
+        }
+
+        private void DziałanieZwykłe(object sender, RoutedEventArgs e)
+        {
+            model.DziałanieZwykłe(
+                ((Button)sender).Content.ToString()
+                );
+        }
+
+        private void PodajWynik(object sender, RoutedEventArgs e)
+        {
+            model.PodajWynik();
+        }
+
+        private void DziałanieJednoargumentowe(object sender, RoutedEventArgs e)
+        {
+            model.DziałanieJednoargumentowe(
+                ((Button)sender).Content.ToString()
+                );
+        }
+
+        private void DziałanieProcentowe(object sender, RoutedEventArgs e)
+        {
+            model.Procent();
         }
     }
 }
