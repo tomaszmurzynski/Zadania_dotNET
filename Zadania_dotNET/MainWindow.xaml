@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Zadania_dotNET"
         mc:Ignorable="d"
-         Title="MainWindow" Height="750" Width="510">
+         Title="Zadanie 1 - Layaut i zasoby" Height="750" Width="510">
     <Window.Resources>
 
         <SolidColorBrush x:Key="MySolidColorDarkRed" Color="#900" />
